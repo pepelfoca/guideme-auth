@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Opening GuideMe...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: -apple-system; display: flex; flex-direction: column;
+           align-items: center; justify-content: center; height: 100vh; margin: 0;
+           background: #f2f2f7; }
+    h2 { color: #1c1c1e; }
+    p  { color: #8e8e93; }
+  </style>
+</head>
+<body>
+  <h2>Opening GuideMe...</h2>
+  <p>You will be redirected automatically.</p>
+  <script>
+    const params = window.location.search;
+    window.location.replace("guideme://reset-password" + params);
+  </script>
+</body>
+</html>
