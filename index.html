@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Opening GuideMe...</title>
+  <title>GuideMe</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body { font-family: -apple-system; display: flex; flex-direction: column;
-           align-items: center; justify-content: center; height: 100vh; margin: 0;
-           background: #f2f2f7; }
-    h2 { color: #1c1c1e; }
-    p  { color: #8e8e93; }
+           align-items: center; justify-content: center; height: 100vh;
+           margin: 0; background: #f2f2f7; }
+    h2 { color: #1c1c1e; margin-bottom: 8px; }
+    p  { color: #8e8e93; margin-bottom: 32px; }
+    a  { background: #007AFF; color: white; padding: 16px 32px;
+         border-radius: 12px; text-decoration: none; font-size: 17px;
+         font-weight: 600; }
   </style>
 </head>
 <body>
-  <h2>Opening GuideMe...</h2>
-  <p>You will be redirected automatically.</p>
+  <h2>Reset your password</h2>
+  <p>Tap below to continue in GuideMe</p>
+  <a id="openApp">Open GuideMe</a>
   <script>
     const params = window.location.search;
-    window.location.replace("guideme://reset-password" + params);
+    document.getElementById('openApp').href = "guideme://reset-password" + params;
   </script>
 </body>
 </html>
